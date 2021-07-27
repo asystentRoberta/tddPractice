@@ -17,6 +17,6 @@ public class Franc extends Money {
 
     String currency() {
 
-        return "CHF";
+        return currency;
     }
 }
