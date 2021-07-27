@@ -2,7 +2,7 @@ package pl.com.bohdziewicz.tddPractices;
 
 public class Dollar {
 
-    int amount;
+    private final int amount;
 
     Dollar(int amount) {
 
