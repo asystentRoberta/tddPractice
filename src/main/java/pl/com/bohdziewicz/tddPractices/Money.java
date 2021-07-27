@@ -32,7 +32,7 @@ public class Money {
         if (object instanceof Money) {
             Money money = (Money) object;
             return amount == money.amount &&
-                    getClass().equals(money.getClass());
+                    currency().equals(money.currency());
         }
         return false;
     }
@@ -42,7 +42,8 @@ public class Money {
         return currency;
     }
 
-    public String toString(){
+    public String toString() {
+
         return amount + " " + currency;
     }
 }
