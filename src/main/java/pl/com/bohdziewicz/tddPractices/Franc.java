@@ -1,25 +1,14 @@
 package pl.com.bohdziewicz.tddPractices;
 
-public class Franc {
+public class Franc extends Money {
 
-    private int ammount;
+    public Franc(int amount) {
 
-    public Franc(int ammount) {
-
-        this.ammount = ammount;
+        this.amount = amount;
     }
 
     Franc times(int multiplayer) {
 
-        return new Franc(ammount * multiplayer);
-    }
-
-    @Override public boolean equals(Object o) {
-
-        if (o instanceof Franc) {
-            Franc franc = (Franc) o;
-            return ammount == franc.ammount;
-        }
-        return false;
+        return new Franc(amount * multiplayer);
     }
 }

@@ -1,8 +1,6 @@
 package pl.com.bohdziewicz.tddPractices;
 
-public class Dollar {
-
-    private final int amount;
+public class Dollar extends Money {
 
     Dollar(int amount) {
 
@@ -12,14 +10,5 @@ public class Dollar {
     Dollar times(int multiplier) {
 
         return new Dollar(amount * multiplier);
-    }
-
-    @Override public boolean equals(Object o) {
-
-        if (o instanceof Dollar) {
-            Dollar dollar = (Dollar) o;
-            return amount == dollar.amount;
-        }
-        return false;
     }
 }
