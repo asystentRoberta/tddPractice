@@ -6,9 +6,4 @@ public class Franc extends Money {
 
         super(amount, currency);
     }
-
-    Money times(int multiplayer) {
-
-        return Money.franc(amount * multiplayer);
-    }
 }

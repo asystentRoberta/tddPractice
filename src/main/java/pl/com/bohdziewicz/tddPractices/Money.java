@@ -1,6 +1,6 @@
 package pl.com.bohdziewicz.tddPractices;
 
-public abstract class Money {
+public class Money {
 
     protected int amount;
     protected String currency;
@@ -21,7 +21,10 @@ public abstract class Money {
         return new Franc(amount, "CHF");
     }
 
-    abstract Money times(int multiplier);
+    Money times(int multiplier) {
+
+        return new Money(amount * multiplier, currency);
+    }
 
     @Override
     public boolean equals(Object object) {
@@ -29,7 +32,7 @@ public abstract class Money {
         if (object instanceof Money) {
             Money money = (Money) object;
             return amount == money.amount &&
-                    getClass().equals(money.getClass());
+                    currency().equals(money.currency());
         }
         return false;
     }
@@ -37,5 +40,10 @@ public abstract class Money {
     String currency() {
 
         return currency;
+    }
+
+    public String toString() {
+
+        return amount + " " + currency;
     }
 }
