@@ -2,8 +2,10 @@ package pl.com.bohdziewicz.tddPractices;
 
 public class Franc extends Money {
 
-    private String currency;
+    private final String currency;
+
     public Franc(int amount) {
+
         this.amount = amount;
         currency = "CHF";
     }
@@ -12,7 +14,9 @@ public class Franc extends Money {
 
         return new Franc(amount * multiplayer);
     }
-    String currency(){
+
+    String currency() {
+
         return "CHF";
     }
 }

@@ -2,8 +2,10 @@ package pl.com.bohdziewicz.tddPractices;
 
 public class Dollar extends Money {
 
-    private String currency;
+    private final String currency;
+
     Dollar(int amount) {
+
         this.amount = amount;
         currency = "USD";
     }
@@ -12,7 +14,9 @@ public class Dollar extends Money {
 
         return new Dollar(amount * multiplier);
     }
-    String currency(){
+
+    String currency() {
+
         return "USD";
     }
 }
