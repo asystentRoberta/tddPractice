@@ -26,4 +26,6 @@ public abstract class Money {
         }
         return false;
     }
+
+    abstract String currency();
 }

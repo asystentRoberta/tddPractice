@@ -11,4 +11,7 @@ public class Franc extends Money {
 
         return new Franc(amount * multiplayer);
     }
+    String currency(){
+        return "CHF";
+    }
 }
