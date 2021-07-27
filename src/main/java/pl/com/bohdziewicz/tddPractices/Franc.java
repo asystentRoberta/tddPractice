@@ -2,10 +2,9 @@ package pl.com.bohdziewicz.tddPractices;
 
 public class Franc extends Money {
 
-    public Franc(int amount, String currency) {
+    Franc(int amount, String currency) {
 
-        this.amount = amount;
-        this.currency = currency;
+        super(amount, currency);
     }
 
     Money times(int multiplayer) {
