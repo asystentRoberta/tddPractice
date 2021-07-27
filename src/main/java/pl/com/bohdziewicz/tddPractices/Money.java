@@ -3,6 +3,7 @@ package pl.com.bohdziewicz.tddPractices;
 public abstract class Money {
 
     protected int amount;
+    protected String currency;
 
     static Dollar dollar(int amount) {
 
@@ -27,5 +28,8 @@ public abstract class Money {
         return false;
     }
 
-    abstract String currency();
+    String currency() {
+
+        return currency;
+    }
 }
