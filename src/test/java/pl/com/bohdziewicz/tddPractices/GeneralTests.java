@@ -32,7 +32,9 @@ public class GeneralTests {
     @Test
     public void testSimpleAddition() {
 
+        Money five = Money.dollar(5);
         Bank bank = new Bank();
+        Expression sum = five.plus(five);
         Money reduced = bank.reduce(sum, "USD");
         assertEquals(Money.dollar(10), reduced);
     }
