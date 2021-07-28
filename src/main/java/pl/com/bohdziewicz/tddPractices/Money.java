@@ -1,6 +1,6 @@
 package pl.com.bohdziewicz.tddPractices;
 
-public class Money {
+public class Money implements Expression {
 
     protected int amount;
     protected String currency;
@@ -47,7 +47,7 @@ public class Money {
         return amount + " " + currency;
     }
 
-    Money plus(Money addend) {
+    Expression plus(Money addend) {
 
         return new Money(amount + addend.amount, currency);
     }
