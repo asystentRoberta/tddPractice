@@ -30,8 +30,10 @@ public class GeneralTests {
     }
 
     @Test
-    public void testSimpleAddition(){
-        Money reduced = Money.dollar(5).plus(Money.dollar(5));
+    public void testSimpleAddition() {
+
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
         assertEquals(Money.dollar(10), reduced);
     }
 }
