@@ -4,6 +4,8 @@ public class Bank {
 
     Money reduce(Expression source, String to) {
 
-        return  new Money(10, "USD");
+        Sum sum = (Sum) source;
+        int amount = sum.augend.amount + sum.addend.amount;
+        return new Money(amount, to);
     }
 }
