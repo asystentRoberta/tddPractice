@@ -22,4 +22,9 @@ public class Sum implements Expression {
 
         return new Sum(this, addend);
     }
+
+    Expression times(int multiplayer) {
+
+        return new Sum(augend.times(multiplayer), addend.times(multiplayer));
+    }
 }
