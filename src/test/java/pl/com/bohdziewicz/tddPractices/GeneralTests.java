@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
 
 public class GeneralTests {
 
@@ -123,6 +122,10 @@ public class GeneralTests {
     public void testPlusSameCurrencyReturnsMoney() {
 
         Expression sum = Money.dollar(1).plus(Money.dollar(1));
-        assertTrue(sum instanceof Money);
+        // assertTrue(sum instanceof Money); <- Kent Beck said that this test is bad - and told us to delete it/
+        // It's not clear (for me) - why.
+        //We can check what is going on with that sum - for example in this way:
+        Bank bank = new Bank();
+        assertEquals(Money.dollar(2), sum.reduce(bank, "USD"));
     }
 }
