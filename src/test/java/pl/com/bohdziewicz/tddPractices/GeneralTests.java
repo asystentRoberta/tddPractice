@@ -93,4 +93,39 @@ public class GeneralTests {
         Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
         assertEquals(Money.dollar(10), result);
     }
+
+    @Test
+    public void testSumPlusMoney() {
+
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Expression sum = new Sum(fiveBucks, tenFrancs).plus(fiveBucks);
+        Money result = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(15), result);
+    }
+
+    @Test
+    public void testSumTimes() {
+
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Expression sum = new Sum(fiveBucks, tenFrancs).times(2);
+        Money result = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(20), result);
+    }
+
+    @Test
+    public void testPlusSameCurrencyReturnsMoney() {
+
+        Expression sum = Money.dollar(1).plus(Money.dollar(1));
+        // assertTrue(sum instanceof Money); <- Kent Beck said that this test is bad - and told us to delete it/
+        // It's not clear (for me) - why.
+        //We can check what is going on with that sum - for example in this way:
+        Bank bank = new Bank();
+        assertEquals(Money.dollar(2), sum.reduce(bank, "USD"));
+    }
 }
