@@ -14,7 +14,7 @@ A walkthrough of the examples given in "Test Driven Development by Example" by K
 
 After few first commits I found own way to work with this book. For Chapter I prepared a branch and from this branch you can find sub-branch for book's subsection.
 The best way to work with this repo is playback all comits and wath how the code was changed. 
-I can recomended great addon for github for this. Take a look: [git-playbck](https://github.com/jianli/git-playback =10).
+I can recomended great addon for github for this. Take a look: [git-playbck](https://github.com/jianli/git-playback).
 With this addon you can:
 ```sh
 cd /repo
@@ -29,6 +29,7 @@ and then press the following keys to navigate
 * `Ctrl` + `p`revious line
 * `q`uit
 
+![](https://camo.githubusercontent.com/beb4508dda753808ac73690c05f1c876ead91fcbbb43cafa0e3364f34a83c65b/68747470733a2f2f7261772e6769746875622e636f6d2f6a69616e6c692f6769742d706c61796261636b2f6d61737465722f616e696d6174696f6e2e676966)
 It is brilliant!
 
 ----
