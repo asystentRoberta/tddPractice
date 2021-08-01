@@ -75,5 +75,14 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+	<resources>
+		<resource>
+			<directory>src</directory>
+			<excludes>
+			<exclude>src/python</exclude>
+			</excludes>
+		</resource>
+	
+	</resources>
     </build>
 </project>
